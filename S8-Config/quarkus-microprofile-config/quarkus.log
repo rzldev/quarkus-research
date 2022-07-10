@@ -1,0 +1,4 @@
+2022-07-11 07:31:53,205 unknown-host quarkus-microprofile-config-dev.jar[74377] INFO  [io.quarkus] (Quarkus Main Thread) quarkus-microprofile-config 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.10.2.Final) started in 3.106s. Listening on: http://localhost:9090
+2022-07-11 07:31:53,235 unknown-host quarkus-microprofile-config-dev.jar[74377] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2022-07-11 07:31:53,236 unknown-host quarkus-microprofile-config-dev.jar[74377] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, config-yaml, resteasy, smallrye-context-propagation, vertx]
+2022-07-11 07:32:57,439 unknown-host quarkus-microprofile-config-dev.jar[74377] INFO  [io.quarkus] (Shutdown thread) quarkus-microprofile-config stopped in 0.026s

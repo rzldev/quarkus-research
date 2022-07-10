@@ -1,0 +1,15 @@
+quarkus:
+  http:
+    port: 9090
+  log:
+    file:
+      enable: true
+
+config:
+  message:
+    inject: Hello from ConfigResource (Inject)
+    provider: Hello from ConfigResource (Provider)
+
+app:
+  message:
+    Hello from ConfigResource (custom config)
