@@ -1,0 +1,7 @@
+2022-07-11 16:32:08,427 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Get the movie by the title Iron Man
+2022-07-11 16:32:19,858 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Get all movies by country USA
+2022-07-11 16:32:31,204 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Update an existing movie inside the database by id 1
+2022-07-11 16:32:31,462 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been updated with id 1
+2022-07-11 16:32:41,081 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Delete an existing movie inside the database by id 1
+2022-07-11 16:32:41,092 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been deleted with id 1
+2022-07-11 16:32:51,949 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[99661] INFO  [io.quarkus] (Shutdown thread) quarkus-hibernate-orm-panache-repository stopped in 0.050s
