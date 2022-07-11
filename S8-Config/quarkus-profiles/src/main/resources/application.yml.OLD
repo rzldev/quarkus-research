@@ -1,0 +1,54 @@
+greeting:
+  message: "hello"
+
+quarkus:
+  http:
+    port: 8080
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/mydb
+  hibernate-orm:
+    database:
+      generation: drop-and-create
+  log:
+    console:
+      level: INFO
+hello:
+  message: Hello default message
+
+"%dev":
+  quarkus:
+    http:
+      port: 9090
+    log:
+      console:
+        level: ALL
+  hello:
+    message: Hello dev message
+
+"%test":
+  quarkus:
+    datasource:
+      db-kind: postgresql
+      username: postgres
+      password: postgres
+      jdbc:
+        url: jdbc:postgresql://localhost:5432/testdb
+    hibernate-orm:
+      database:
+        generation: drop-and-create
+    log:
+      console:
+        level: DEBUG
+  hello:
+    message: Hello test message
+
+"%prod":
+  quarkus:
+    package:
+      type: uber-jar
+  hello:
+    message: Hello prod message
