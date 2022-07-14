@@ -1,0 +1,3 @@
+2022-07-14 10:31:03,163 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Get all movies inside the database
+2022-07-14 10:31:13,391 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Delete an existing movie inside the database by id 1
+2022-07-14 10:31:13,457 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been deleted with id 1

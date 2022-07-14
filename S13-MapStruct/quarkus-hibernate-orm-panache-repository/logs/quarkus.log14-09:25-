@@ -1,0 +1,74 @@
+2022-07-14 09:25:25,093 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.console.json" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2022-07-14 09:25:25,094 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.console.json.pretty-print" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2022-07-14 09:25:25,094 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.http-access.log.enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2022-07-14 09:25:27,260 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread: <default>) SQL Warning Code: 0, SQLState: 00000
+2022-07-14 09:25:27,262 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread: <default>) table "movies" does not exist, skipping
+2022-07-14 09:25:27,265 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread: <default>) SQL Warning Code: 0, SQLState: 00000
+2022-07-14 09:25:27,266 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread: <default>) sequence "hibernate_sequence" does not exist, skipping
+2022-07-14 09:25:30,374 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 3014 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+	at io.netty.channel.AbstractChannel.newId(AbstractChannel.java:113)
+	at io.netty.channel.AbstractChannel.<init>(AbstractChannel.java:73)
+	at io.netty.channel.nio.AbstractNioChannel.<init>(AbstractNioChannel.java:80)
+	at io.netty.channel.nio.AbstractNioMessageChannel.<init>(AbstractNioMessageChannel.java:42)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.<init>(NioServerSocketChannel.java:89)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.<init>(NioServerSocketChannel.java:75)
+	at io.vertx.core.net.impl.transport.Transport$$Lambda$889/0x00000008014c0c38.newChannel(Unknown Source)
+	at io.netty.bootstrap.AbstractBootstrap.initAndRegister(AbstractBootstrap.java:310)
+	at io.netty.bootstrap.AbstractBootstrap.doBind(AbstractBootstrap.java:272)
+	at io.netty.bootstrap.AbstractBootstrap.bind(AbstractBootstrap.java:268)
+	at io.vertx.core.net.impl.AsyncResolveConnectHelper.lambda$doBind$2(AsyncResolveConnectHelper.java:58)
+	at io.vertx.core.net.impl.AsyncResolveConnectHelper$$Lambda$890/0x00000008014c0e58.handle(Unknown Source)
+	at io.vertx.core.impl.future.FutureImpl$3.onSuccess(FutureImpl.java:141)
+	at io.vertx.core.impl.future.FutureBase.emitSuccess(FutureBase.java:60)
+	at io.vertx.core.impl.future.FutureImpl.addListener(FutureImpl.java:196)
+	at io.vertx.core.impl.future.FutureImpl.onComplete(FutureImpl.java:164)
+	at io.vertx.core.impl.AddressResolver.resolveHostname(AddressResolver.java:86)
+	at io.vertx.core.impl.VertxImpl.resolveAddress(VertxImpl.java:775)
+	at io.vertx.core.net.impl.AsyncResolveConnectHelper.doBind(AsyncResolveConnectHelper.java:73)
+	at io.vertx.core.net.impl.TCPServerBase.listen(TCPServerBase.java:169)
+	at io.vertx.core.net.impl.TCPServerBase.bind(TCPServerBase.java:100)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:217)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:149)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:154)
+	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.setupTcpHttpServer(VertxHttpRecorder.java:1174)
+	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1109)
+	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:196)
+	at io.vertx.core.impl.DeploymentManager$$Lambda$882/0x00000008014a0b58.handle(Unknown Source)
+	at io.vertx.core.impl.AbstractContext.dispatch(AbstractContext.java:100)
+	at io.vertx.core.impl.AbstractContext.dispatch(AbstractContext.java:63)
+	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:38)
+	at io.vertx.core.impl.EventLoopContext$$Lambda$883/0x00000008014a0d68.run(Unknown Source)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@18.0.1.1/java.lang.Thread.run(Thread.java:833)
+
+2022-07-14 09:25:30,382 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 3014 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+	at io.vertx.core.net.impl.TCPServerBase.listen(TCPServerBase.java:125)
+	at io.vertx.core.net.impl.TCPServerBase.bind(TCPServerBase.java:100)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:217)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:149)
+	at io.vertx.core.http.impl.HttpServerImpl.listen(HttpServerImpl.java:154)
+	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.setupTcpHttpServer(VertxHttpRecorder.java:1174)
+	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1109)
+	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:196)
+	at io.vertx.core.impl.DeploymentManager$$Lambda$882/0x00000008014a0b58.handle(Unknown Source)
+	at io.vertx.core.impl.AbstractContext.dispatch(AbstractContext.java:100)
+	at io.vertx.core.impl.AbstractContext.dispatch(AbstractContext.java:63)
+	at io.vertx.core.impl.EventLoopContext.lambda$runOnContext$0(EventLoopContext.java:38)
+	at io.vertx.core.impl.EventLoopContext$$Lambda$883/0x00000008014a0d68.run(Unknown Source)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:503)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@18.0.1.1/java.lang.Thread.run(Thread.java:833)
+
+2022-07-14 09:25:31,151 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] WARN  [io.qua.net.run.NettyRecorder] (Thread-25) Netty DefaultChannelId initialization (with io.netty.machineId system property set to 41:84:f1:9f:9f:18:04:64) took more than a second
+2022-07-14 09:25:31,191 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [io.quarkus] (Quarkus Main Thread) quarkus-hibernate-orm-panache-repository 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.10.2.Final) started in 10.031s. Listening on: http://localhost:8080
+2022-07-14 09:25:31,194 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2022-07-14 09:25:31,195 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy, resteasy-jackson, smallrye-context-propagation, vertx]

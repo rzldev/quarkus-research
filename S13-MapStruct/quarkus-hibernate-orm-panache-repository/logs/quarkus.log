@@ -1,0 +1,4 @@
+2022-07-14 10:32:48,461 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Update an existing movie inside the database by id 2
+2022-07-14 10:32:48,474 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been updated with id 2
+2022-07-14 10:32:52,805 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Get all movies inside the database
+2022-07-14 10:32:58,361 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [io.quarkus] (Shutdown thread) quarkus-hibernate-orm-panache-repository stopped in 0.064s

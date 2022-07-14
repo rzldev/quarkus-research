@@ -1,0 +1,4 @@
+2022-07-14 10:30:07,245 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Crete a new movie inside the database
+2022-07-14 10:30:07,338 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been created with id 1
+2022-07-14 10:30:59,292 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] DEBUG [org.rzl.qua.MovieResource] (executor-thread-0) Crete a new movie inside the database
+2022-07-14 10:30:59,312 macoss-macbook-pro quarkus-hibernate-orm-panache-repository-dev.jar[2611] INFO  [org.rzl.qua.MovieResource] (executor-thread-0) The movie has been created with id 2
