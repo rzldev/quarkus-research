@@ -1,0 +1,59 @@
+version: '3.10'
+
+services:
+  infinispan:
+    image: gennyproject/infinispan:14-9
+    container_name: infinispan
+    hostname: infinispan
+    environment:
+      JAVA_OPTS: " -Xms64m -Xmx4096m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=2048m -Dinfinispan.bind.address=0.0.0.0 -Dpersistence.db.server.ip=mysql -Dpersistence.db.server.port=3306 -Dpersistence.db.name=infinispan  -Dpersistence.db.username=genny -Dpersistence.db.password=password"
+      USER: genny
+      PASS: password
+      ISPN_HOME: /opt/infinispan
+    ports:
+      - "11222:11222"
+    volumes:
+      - ./infinispan/infinispan_persistence.xml:/opt/infinispan/server/conf/infinispan.xml
+      - ./infinispan/rebuild_index.sh:/opt/infinispan/server/bin/rebuild_index.sh
+      - ./infinispan/log4j2.xml:/opt/infinispan/server/conf/log4j2.xml
+    networks:
+      - core-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:11222/rest/v2/cache-managers/default/health/status" ]
+      interval: 2s
+      timeout: 10s
+      retries: 100
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: mysql:8.0.30
+    restart: unless-stopped
+    container_name: mysql
+    hostname: mysql
+    environment:
+      - MYSQL_DATABASE=infinispan
+      - MYSQL_USER=genny
+      - MYSQL_PASSWORD=password
+      - MYSQL_RANDOM_ROOT_PASSWORD=true
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - mysqldb-volume:/var/lib/mysql
+      - ./infinispan/sql-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - core-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 10s
+      retries: 10
+
+volumes:
+  mysqldb-volume:
+
+networks:
+  core-network:
+    driver: bridge

@@ -1,0 +1,44 @@
+<distributed-cache statistics="true">
+    <encoding>
+        <key media-type="application/x-protostream"/>
+        <value media-type="application/x-protostream"/>
+    </encoding>
+    <indexing>
+        <indexed-entities>
+            <indexed-entity>book_samples.MESSAGE_VALUE</indexed-entity>
+        </indexed-entities>
+    </indexing>
+    <persistence passivation="false">
+        <query-jdbc-store xmlns="urn:infinispan:config:store:jdbc:14.0"
+                          dialect="MYSQL"
+                          shared="false"
+                          key-columns="ID,FK_ID">
+            <write-behind modification-queue-size="1024"
+                          fail-silently="false"/>
+            <connection-pool connection-url="CONNECTION_URL"
+                             username="USERNAME"
+                             password="PASSWORD"
+                             driver="DRIVER"/>
+            <schema key-message-name="MESSAGE_KEY"
+                    message-name="MESSAGE_VALUE"
+                    package="book_samples"/>
+            <queries
+                    select-single="SELECT b.id, b.title, b.description, b.publication_year, a.id, b.price
+                    FROM books b
+                    JOIN authors a ON b.author_id = a.id
+                    WHERE b.author_id=:id;"
+
+                    select-all="SELECT b.id, b.title, b.description, b.publication_year, a.id, b.price
+                    FROM books b
+                    JOIN authors a ON b.author_id = a.id;"
+
+                    size="SELECT COUNT(b.id)
+                    FROM books b
+                    JOIN authors a ON b.author_id = a.id;"
+
+                    upsert="INSERT INTO books (title, description, publication_year, author_id, price)
+                    VALUES (:title, :description, :publicationYear, :author.id, price);"
+            />
+        </query-jdbc-store>
+    </persistence>
+</distributed-cache>
