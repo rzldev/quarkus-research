@@ -1,0 +1,28 @@
+version: "3.10"
+
+services:
+  ecommerce-cart:
+    container_name: ecommerce-cart
+    hostname: ecommerce-cart
+    image: ecommerce/cart:1.0.0-SNAPSHOT
+    ports:
+      - "8081:8081"
+    expose:
+      - 8081
+    environment:
+      MP_JWT_VERIFY_PUBLICKEY_LOCATION: /jwt/publicKey.pem
+    volumes:
+      - ./jwt:/jwt
+
+  ecommerce-jwt:
+    container_name: ecommerce-jwt
+    hostname: ecommerce-jwt
+    image: ecommerce/jwt:1.0.0-SNAPSHOT
+    ports:
+      - "8082:8082"
+    expose:
+      - 8082
+    environment:
+      SMALLRYE_JWT_SIGN_KEY_LOCATION: /jwt/privateKey.pem
+    volumes:
+      - ./jwt:/jwt
